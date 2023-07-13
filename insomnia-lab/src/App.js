@@ -1,5 +1,6 @@
 import './App.css';
 import ShowCoin from './component/ShowCoin';
+import NFTWallet from './component/NFTWallet';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       
       <h1>Huy Tran - Insomnia Lab</h1>
       <ShowCoin/>
-    
+      <Wallet />
     </div>
   );
 }

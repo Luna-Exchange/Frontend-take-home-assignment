@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-import {Card} from 'react-bootstrap'
+
 import ShowDetail from './ShowDetail'
 
 const ShowCoin = () => {
@@ -14,11 +14,11 @@ const ShowCoin = () => {
     useEffect (()=>{
         getAPIData()
         
-        const interval = setInterval(() => {
-            getAPIData()
-            console.log(dataAPI)
-            }, 5000);
-            return () => clearInterval(interval);
+        // const interval = setInterval(() => {
+        //     getAPIData()
+        //     console.log(dataAPI)
+        //     }, 5000);
+        //     return () => clearInterval(interval);
     },[])
 
     useEffect(()=> {
