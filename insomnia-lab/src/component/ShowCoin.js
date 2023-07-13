@@ -17,10 +17,10 @@ const ShowCoin = () => {
     useEffect (()=>{
         getAPIData()
         
-        // const interval = setInterval(() => {
-        //     getAPIData()
-        //     }, 5000);
-        //     return () => clearInterval(interval);
+        const interval = setInterval(() => {
+            getAPIData()
+            }, 5000);
+            return () => clearInterval(interval);
     },[])
 
     useEffect(()=> {
