@@ -1,6 +1,6 @@
 import './App.css';
 import ShowCoin from './component/ShowCoin';
-import NFTWallet from './component/NFTWallet';
+import Wallet from './component/NFTWallet';
 
 function App() {
   return (

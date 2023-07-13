@@ -4,7 +4,8 @@ import axios from 'axios'
 import ShowDetail from './ShowDetail'
 
 const ShowCoin = () => {
-    const [dataAPI, setDataAPI] = useState()
+    const [dataAPI, setDataAPI] = useState(null)
+
     const getAPIData = () => {
         axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
         .then(res => setDataAPI(res.data))
@@ -16,7 +17,6 @@ const ShowCoin = () => {
         
         // const interval = setInterval(() => {
         //     getAPIData()
-        //     console.log(dataAPI)
         //     }, 5000);
         //     return () => clearInterval(interval);
     },[])
@@ -30,13 +30,13 @@ const ShowCoin = () => {
             <h3>Loading...</h3>
         )
     } else {
-            return (
-                <>  
-                    <ShowDetail data={dataAPI}/>
-                    
-                </>
-                )
-            }      
+        return (
+            <>  
+                <ShowDetail data={dataAPI}/>
+                
+            </>
+            )
+        }      
 
 }
 
