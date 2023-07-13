@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import ShowDetail from './ShowDetail'
+import './ShowCoin.css'
 
 const ShowCoin = () => {
     const [dataAPI, setDataAPI] = useState(null)
@@ -33,7 +35,10 @@ const ShowCoin = () => {
         return (
             <>  
                 <ShowDetail data={dataAPI}/>
-                
+                <br />
+                <Button className='btn btn-primary btn-lg'>
+                    <Link to="/wallet">NFT Wallet</Link>
+                </Button>
             </>
             )
         }      

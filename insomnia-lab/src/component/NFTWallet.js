@@ -22,7 +22,7 @@ const Wallet = () => {
     const getNFTData = () => {
         if(!walletAddress) return
         // get request for NFT items by onwer, which was assigned to walletAddress
-        axios.get(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0x4765273c477c2dc484da4f1984639e943adccfeb`)
+        axios.get(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${walletAddress}`)
                 .then(res => setNFTData(res.data))
                 .catch(err => console.log(err))
     }
@@ -34,9 +34,11 @@ const Wallet = () => {
 
     return (
         <>
-            <div>Account:{walletAddress}</div>
-            <Button onClick={connectWallet}>Connect Wallet</Button>
-            <NFTContainer NFTData={NFTData}/>
+            <div className="main-wallet">
+                <h3>Account:{walletAddress}</h3>
+                <Button onClick={connectWallet}>Connect Wallet</Button>
+                <NFTContainer NFTData={NFTData}/>
+            </div>
         </>
     )
 }

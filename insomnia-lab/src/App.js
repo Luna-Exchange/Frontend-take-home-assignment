@@ -1,6 +1,7 @@
 import './App.css';
-import ShowCoin from './component/ShowCoin';
-import Wallet from './component/NFTWallet';
+import ShowCoin from './component/ShowCoin'
+import Wallet from './component/NFTWallet'
+
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       
       <h1>Huy Tran - Insomnia Lab</h1>
       <ShowCoin/>
-      <Wallet />
+      {/* <Wallet /> */}
+    
     </div>
   );
 }
